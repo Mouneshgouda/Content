@@ -132,7 +132,7 @@ print(stats.stdev(data))    # Standard deviation
 ```
 - Using scipy.stats:
 ```python
-  from scipy import stats
+from scipy import stats
 import numpy as np
 
 data = [1, 2, 2, 3, 4, 4, 4, 5]
