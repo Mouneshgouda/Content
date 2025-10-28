@@ -1,7 +1,7 @@
 # ----------------------------------------------------------
 # 🩺 HEART DISEASE DIAGNOSIS USING BAYESIAN NETWORK (FINAL SAFE VERSION)
 # ----------------------------------------------------------
-
+``` python
 import pandas as pd
 import numpy as np
 
