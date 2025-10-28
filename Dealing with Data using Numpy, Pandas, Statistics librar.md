@@ -131,7 +131,7 @@ print(stats.mode(data))     # Mode
 print(stats.stdev(data))    # Standard deviation
 ```
 - Using scipy.stats:
-  ```python
+```python
   from scipy import stats
 import numpy as np
 
@@ -146,6 +146,7 @@ print(np.var(data))
 t_stat, p_val = stats.ttest_1samp(data, 3)
 print(f"T-statistic: {t_stat}, p-value: {p_val}")
 ```
+
 ### ✅ Why Use Statistics Libraries?
 
 - Summarize data effectively  
