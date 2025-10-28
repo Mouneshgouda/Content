@@ -41,7 +41,7 @@ plt.show()
 ```
 
 ## Preprocessing and Model Training
-```
+```python
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
@@ -96,7 +96,7 @@ for name, pipeline in models.items():
 
 ```
 ## Cross-Validation & Visualization
-```
+```python
 from sklearn.model_selection import KFold, cross_val_score
 import matplotlib.pyplot as plt
 
