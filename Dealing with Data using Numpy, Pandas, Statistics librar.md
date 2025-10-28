@@ -1,4 +1,4 @@
-# 📘 Dealing with Data using NumPy, Pandas, and Statistics Library
+# 📘1.Dealing with Data using NumPy, Pandas, and Statistics Library
 
 This guide covers how to handle and analyze data in Python using three essential libraries — **NumPy**, **Pandas**, and **Statistics**.  
 These tools are the foundation of data analysis, data science, and machine learning workflows.
