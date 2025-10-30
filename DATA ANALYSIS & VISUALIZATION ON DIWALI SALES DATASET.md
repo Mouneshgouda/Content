@@ -56,9 +56,10 @@ It includes customer demographics, purchase details, and product categories.
 | `Orders` | Number of orders placed |
 | `Amount` | Total purchase amount |
 
-**Goal:**  
-To analyze purchasing trends across demographics and product categories during the festive season.
----
+**Goal:** 
+
+- To analyze purchasing trends across demographics and product categories during the festive season.
+
 
 ## 🧰 Software and Libraries Used
 
