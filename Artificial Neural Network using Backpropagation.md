@@ -51,8 +51,25 @@ This dataset contains customer demographics and banking details to predict wheth
 ---
 
 ## 🧰 Software and Libraries
+
+### 💻 Software Requirements
+
+| Software | Description |
+|-----------|-------------|
+| **Python (≥3.8)** | Primary programming language used for model implementation |
+| **Google Colab / Jupyter Notebook** | Interactive IDE for coding, visualization, and training neural networks |
+| **Anaconda (optional)** | For environment management and package installation |
+| **GitHub / Google Drive** | Store and share datasets, scripts, and project notebooks |
+| **Kaggle** | Source for the `Churn_Modelling.csv` dataset |
+
+---
+
+### 📦 Required Python Libraries
+
+Install all dependencies using:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras
+
 ```
 ## ⚙️ Tasks and Step-by-Step Approach
 - 🧠 Task 1: Load and Explore Dataset
