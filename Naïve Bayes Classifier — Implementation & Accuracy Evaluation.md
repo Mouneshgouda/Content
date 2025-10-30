@@ -136,7 +136,6 @@ https://drive.google.com/file/d/1aiTTWQ0NDpLB3FPg2SQ2JQ_wdQPuAwop/view?usp=shari
 You can run this project online using Google Colab:  
 👉 **[Open in Google Colab](https://colab.research.google.com/drive/1wBu1WyBI1GN6ngegPVnrwOqh0xRTjp5O?usp=sharing)**  
 
-*(Replace the link above with your actual Colab notebook URL after upload.)*
 
 ---
 
