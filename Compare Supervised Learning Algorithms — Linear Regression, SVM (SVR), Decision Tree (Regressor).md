@@ -54,9 +54,22 @@ Predict **Attrition (Yes/No)** based on similar attributes:
 ---
 
 ## 🧰 Software and Libraries
-Install or import the following:
+
+### 💻 Software Requirements
+| Software | Description |
+|-----------|-------------|
+| **Python (≥3.8)** | Core programming language used for model implementation |
+| **Google Colab / Jupyter Notebook** | Interactive environment for running and visualizing results |
+| **Anaconda (optional)** | Provides Python environment and package management |
+| **GitHub / Google Drive** | For saving, sharing, and managing project files |
+
+---
+
+### 📦 Required Python Libraries
+Install the required libraries before running the notebook:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
+
 ```
 ## library Used
 ```python
