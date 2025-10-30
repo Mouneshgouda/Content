@@ -35,9 +35,10 @@ You can execute this project using **Google Colab**, **Jupyter Notebook**, or an
 
 ### 🔧 Required Libraries:
 Install or import the following libraries:
+
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn
-``
+```
 
 - **pandas** — for loading and preprocessing data  
 - **numpy** — for numerical operations  
