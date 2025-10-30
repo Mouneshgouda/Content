@@ -144,8 +144,6 @@ https://drive.google.com/file/d/1q3XgoTYk7qIhIBx7X6Cb347Op-J5QRzK/view?usp=shari
 Run this project online using Google Colab:  
 👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1wmhVfJsGslEZSi5LOQKLILDhfFtWQDdX?usp=sharing)
 
-*(Replace the link above with your actual Colab notebook URL once uploaded.)*
-
 ---
 
 ## 🧪 Testing and Validation
