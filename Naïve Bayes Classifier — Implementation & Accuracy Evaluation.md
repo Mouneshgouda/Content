@@ -3,13 +3,41 @@
 ---
 
 ## 🎯 Objective
-
 The goal of this project is to **implement a Naïve Bayes classifier** using Python and evaluate its performance on a given dataset.  
 By training the model on labeled data stored in a `.csv` file and testing it with multiple test sets, this project demonstrates how probabilistic classification can be applied for prediction and accuracy measurement.
 
 ---
 
-## 📦 Libraries Used
+## 🎓 Learning Outcomes
+After completing this project, you will be able to:
+- Understand the working principle of the **Naïve Bayes algorithm** and its assumptions of feature independence.  
+- Apply **data preprocessing**, encoding, and feature selection for classification tasks.  
+- Build, train, and test a **Gaussian Naïve Bayes model** in Python.  
+- Evaluate model performance using metrics such as **Accuracy**, **Precision**, **Recall**, and **F1-Score**.  
+- Visualize confusion matrices and interpret classification performance.  
+- Adapt the same methodology to solve **text, medical, or business classification problems**.
+
+---
+
+## 🧩 Basic Concepts Required
+Before starting, ensure you understand the following concepts:
+- **Probability Theory** — Conditional probability, Bayes’ theorem.  
+- **Classification** — Difference between supervised learning and unsupervised learning.  
+- **Feature Encoding** — Converting categorical data into numerical form.  
+- **Model Evaluation Metrics** — Accuracy, precision, recall, and F1-score.  
+- **Data Splitting** — Train-test split and cross-validation.  
+- **Python Basics** — Reading CSV files, using pandas and sklearn.
+
+---
+
+## 🧰 Software and Libraries
+You can execute this project using **Google Colab**, **Jupyter Notebook**, or any Python IDE.
+
+### 🔧 Required Libraries:
+Install or import the following libraries:
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn
+``
 
 - **pandas** — for loading and preprocessing data  
 - **numpy** — for numerical operations  
