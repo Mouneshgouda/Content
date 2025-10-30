@@ -180,7 +180,6 @@ https://drive.google.com/file/d/15AiQ0f2-CpMoyCPPPeMgPwssdbia-0oI/view?usp=drive
 You can run this project online using **Google Colab**:  
 👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1lMCfn0Kq8DypMGhXrb2B58h3otnsh7Bm?usp=sharing)
 
-*(Replace the link above with your actual shared Colab notebook URL once uploaded.)*
 
 ---
 
