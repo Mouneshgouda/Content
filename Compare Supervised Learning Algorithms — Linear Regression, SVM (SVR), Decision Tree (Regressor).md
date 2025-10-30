@@ -1,123 +1,209 @@
-# 📊 Compare Supervised Learning Algorithms — Linear Regression, SVM (SVR), Decision Tree (Regressor)
-
-This project compares three **supervised learning algorithms** for a regression task:
-
-- **Linear Regression**
-- **Support Vector Machine (SVR)**
-- **Decision Tree Regressor**
-
-We generate a custom dataset, train each model, and compare their performances using evaluation metrics and visualizations.
+# 🤖 Comparison of Supervised Learning Algorithms  
+### (Linear Regression, Support Vector Machine, Decision Tree)
 
 ---
 
-## 🧠 Objective
-To evaluate and compare the performance of **Linear Regression**, **Support Vector Machine (SVR)**, and **Decision Tree Regressor** using a synthetic dataset.
+## 🎯 Objective
+The objective of this project is to compare three major supervised learning algorithms — **Linear Regression**, **Support Vector Machine (SVM)**, and **Decision Tree** — on real-world data.  
+We will evaluate their accuracy, interpretability, and predictive performance using a dataset containing **employee demographic and job-related details**.
 
 ---
 
-## 📦 Requirements
+## 🧠 Learning Outcomes
+After completing this project, you will be able to:
+- Understand the fundamental differences between regression and classification models.  
+- Implement Linear Regression, Support Vector Machine, and Decision Tree models in Python.  
+- Perform preprocessing (encoding, scaling, and splitting) on real-world datasets.  
+- Compare model performance using metrics like **R² Score, Accuracy, Confusion Matrix**, and **Classification Report**.  
+- Visualize prediction results and interpret model behavior.
 
+---
+
+## 🧩 Basic Concepts Required
+Before you begin, ensure you are familiar with:
+- Basics of **Supervised Learning**  
+- Difference between **Regression** and **Classification**  
+- Concepts of **Overfitting**, **Accuracy**, and **Decision Boundaries**  
+- Python libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+
+---
+
+## 💾 About the Dataset
+You will use two datasets:
+
+### 1️⃣ `supervised_regression_data.csv`
+Predict **Salary** based on features:
+| Feature | Description |
+|----------|--------------|
+| Age | Age of employee |
+| Experience | Total years of experience |
+| Education_Level | High School / Bachelor / Master |
+| City | Location of employee |
+| Salary | Annual income (target variable) |
+
+### 2️⃣ `supervised_classification_data.csv`
+Predict **Attrition (Yes/No)** based on similar attributes:
+| Feature | Description |
+|----------|--------------|
+| Age | Age of employee |
+| Experience | Total years of experience |
+| Education_Level | Educational qualification |
+| City | Location |
+| Attrition | Whether employee left or not (target variable) |
+
+---
+
+## 🧰 Software and Libraries
+Install or import the following:
 ```bash
-pip install numpy pandas scikit-learn matplotlib seaborn
+pip install pandas numpy matplotlib seaborn scikit-learn
 ```
-## Data Overview & Visualization
+## library Used
 ```python
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pandas as pd
-
-df = pd.read_csv('supervised_compare.csv')
-
-# Scatter plot
-plt.scatter(df['x1'], df['y'], s=10, alpha=0.5)
-plt.xlabel('x1'); plt.ylabel('y'); plt.title('y vs x1 (Nonlinear Relationship)')
-plt.show()
-
-# Boxplot by category
-sns.boxplot(x='x3', y='y', data=df)
-plt.title('Distribution of y by Category (x3)')
-plt.show()
-
-```
-
-## Preprocessing and Model Training
-```python
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.linear_model import LinearRegression
-from sklearn.svm import SVR
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, r2_score
 
-# Split features and target
-X = df.drop(columns=['y'])
-y = df['y']
-
-numeric_features = ['x1', 'x2', 'x4']
-categorical_features = ['x3']
-
-# Preprocessing pipeline
-preprocessor = ColumnTransformer(transformers=[
-    ('num', StandardScaler(), numeric_features),
-    ('cat', OneHotEncoder(drop='first'), categorical_features)
-])
-
-# Split train/test
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Define models
-models = {
-    'Linear Regression': Pipeline([('prep', preprocessor), ('model', LinearRegression())]),
-    'SVR (RBF)': Pipeline([('prep', preprocessor), ('model', SVR(kernel='rbf', C=10, epsilon=0.1))]),
-    'Decision Tree': Pipeline([('prep', preprocessor), ('model', DecisionTreeRegressor(max_depth=6, random_state=42))])
-}
+https://drive.google.com/file/d/1SA1dZneaNNWUInHrnlJzeT5yA328mIJy/view?usp=sharing
 ```
-## Evaluation Metrics
-
+## ⚙️ Tasks and Step-by-Step Approach
+- 🧠 Task 1: Load and Explore Dataset
 ```python
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-import numpy as np
+df_reg = pd.read_csv('supervised_regression_data.csv')
+df_cls = pd.read_csv('supervised_classification_data.csv')
 
-results = {}
+print(df_reg.head())
+print(df_cls.head())
 
-for name, pipeline in models.items():
-    pipeline.fit(X_train, y_train)
-    y_pred = pipeline.predict(X_test)
-    
-    mae = mean_absolute_error(y_test, y_pred)
-    mse = mean_squared_error(y_test, y_pred)
-    rmse = np.sqrt(mse)
-    r2 = r2_score(y_test, y_pred)
-    
-    results[name] = {'MAE': mae, 'MSE': mse, 'RMSE': rmse, 'R2': r2}
-    print(f"\n✅ {name}")
-    print(f"MAE: {mae:.4f}, RMSE: {rmse:.4f}, R2: {r2:.4f}")
-
+https://drive.google.com/file/d/14GmW6yN-aPKwFIdmIIJ-fupfzT3BI5VA/view?usp=sharing
 ```
-## Cross-Validation & Visualization
+## 🧹 Task 2: Data Preprocessing
+- Convert categorical data into numeric using LabelEncoder and scale features.
 ```python
-from sklearn.model_selection import KFold, cross_val_score
-import matplotlib.pyplot as plt
+le = LabelEncoder()
 
-cv = KFold(n_splits=5, shuffle=True, random_state=42)
+for col in ['Education_Level', 'City']:
+    df_reg[col] = le.fit_transform(df_reg[col])
+    df_cls[col] = le.fit_transform(df_cls[col])
 
-for name, pipeline in models.items():
-    scores = cross_val_score(pipeline, X, y, scoring='r2', cv=cv)
-    print(f"{name}: Mean R2 = {scores.mean():.4f}, Std = {scores.std():.4f}")
+# Split features and targets
+X_reg = df_reg[['Age', 'Experience', 'Education_Level', 'City']]
+y_reg = df_reg['Salary']
 
-# Visualize predictions
-import matplotlib.pyplot as plt
+X_cls = df_cls[['Age', 'Experience', 'Education_Level', 'City']]
+y_cls = df_cls['Attrition']
 
-for name, pipeline in models.items():
-    pipeline.fit(X_train, y_train)
-    y_pred = pipeline.predict(X_test)
-    plt.scatter(y_test, y_pred, alpha=0.6, label=name)
+# Encode classification target
+y_cls = le.fit_transform(y_cls)
 
-plt.xlabel("True Values")
-plt.ylabel("Predicted Values")
-plt.legend()
-plt.title("True vs Predicted Comparison")
+# Split datasets
+Xr_train, Xr_test, yr_train, yr_test = train_test_split(X_reg, y_reg, test_size=0.2, random_state=42)
+Xc_train, Xc_test, yc_train, yc_test = train_test_split(X_cls, y_cls, test_size=0.2, random_state=42)
+
+https://drive.google.com/file/d/1JiPUudVxqF8lC9geC6pmDBvA0f27Ineo/view?usp=sharing
+```
+## 📈 Task 3: Linear Regression (Regression)
+```python
+reg = LinearRegression()
+reg.fit(Xr_train, yr_train)
+yr_pred = reg.predict(Xr_test)
+
+print("R² Score (Linear Regression):", r2_score(yr_test, yr_pred))
+sns.scatterplot(x=yr_test, y=yr_pred)
+plt.title("Actual vs Predicted Salary (Linear Regression)")
 plt.show()
-```
 
+https://drive.google.com/file/d/1ZiFr38uRzX7bAtsbfnIDOJOazErzezxE/view?usp=sharing
+```
+## 🧮 Task 4: Support Vector Machine (Classification)
+```python
+svm = SVC(kernel='linear')
+svm.fit(Xc_train, yc_train)
+yc_pred_svm = svm.predict(Xc_test)
+
+print("Accuracy (SVM):", accuracy_score(yc_test, yc_pred_svm))
+print(confusion_matrix(yc_test, yc_pred_svm))
+print(classification_report(yc_test, yc_pred_svm))
+
+https://drive.google.com/file/d/1cc6ZZ1d1StSdZ0eOW2lv8M8Q4vM0h8KO/view?usp=sharing
+```
+## 🌳 Task 5: Decision Tree (Classification)
+```python
+dt = DecisionTreeClassifier(max_depth=4, random_state=42)
+dt.fit(Xc_train, yc_train)
+yc_pred_dt = dt.predict(Xc_test)
+
+print("Accuracy (Decision Tree):", accuracy_score(yc_test, yc_pred_dt))
+print(confusion_matrix(yc_test, yc_pred_dt))
+print(classification_report(yc_test, yc_pred_dt))
+
+https://drive.google.com/file/d/1jpgKn6MEAjYPJIUr3Q1ghGzgn75OkCs4/view?usp=sharing
+```
+## 📊 Task 6: Compare Results
+
+| Model | Type | Metric | Score |
+|--------|------|---------|-------|
+| Linear Regression | Regression | R² Score | ~0.80–0.90 |
+| SVM | Classification | Accuracy | ~0.80–0.95 |
+| Decision Tree | Classification | Accuracy | ~0.75–0.90 |
+
+---
+
+## 🧾 Inputs
+
+| Input | Description |
+|--------|-------------|
+| `supervised_regression_data.csv` | Dataset for Salary prediction |
+| `supervised_classification_data.csv` | Dataset for Attrition prediction |
+| Parameters | Split ratio, random seed, depth, kernel type |
+
+---
+
+## 🎯 Expected Outputs
+
+| Output | Description |
+|---------|-------------|
+| Regression Plot | Salary prediction vs actual |
+| Classification Reports | Accuracy, Precision, Recall, F1-Score |
+| Confusion Matrices | SVM & Decision Tree results |
+| Comparison Table | Summary of all model performances |
+
+---
+
+## 🔗 Google Colab Link
+
+You can run this project online using Google Colab:  
+👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1pbatbx4FQFrttHBYjm_3BspHFJzwMrZ5?usp=sharing)  
+
+*(Replace with your actual Colab link once uploaded.)*
+
+---
+
+## 🧪 Testing and Validation
+
+### ✅ 1. Test with Known Patterns
+- Salary increases with **Experience**.  
+- Employees with **higher education** tend to earn more.  
+- **Attrition** may be higher among younger, less-experienced employees.
+
+### ✅ 2. Validate Model Accuracy
+- Use `cross_val_score()` for model stability.  
+- Tune hyperparameters (e.g., `max_depth`, `kernel`, `C`) for better results.  
+
+---
+
+## 🧩 Troubleshooting Tips
+
+| Issue | Likely Cause | Solution |
+|--------|---------------|-----------|
+| `FileNotFoundError` | File not in directory | Verify dataset path or upload to Colab |
+| `ValueError: could not convert string to float` | Unencoded categorical data | Use `LabelEncoder()` or `get_dummies()` |
+| Low Accuracy | Overfitting or unscaled data | Adjust `max_depth` or apply scaling |
+| Empty predictions | Wrong target selection | Ensure correct target column is used |
