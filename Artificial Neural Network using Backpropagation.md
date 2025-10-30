@@ -1,5 +1,4 @@
 # 🧠 Artificial Neural Network using Backpropagation  
-### Dataset: `Churn_Modelling.csv`
 
 ---
 
