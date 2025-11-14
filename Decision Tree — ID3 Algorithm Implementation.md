@@ -1,16 +1,16 @@
 # Decision Tree Classifier using ID3 Algorithm
 
 ## Objective
-This project demonstrates the implementation of a **Decision Tree Classifier** using the **ID3 (Iterative Dichotomiser 3) algorithm**.  
-The model uses **entropy** and **information gain** to build a decision tree, enabling **interpretable, rule-based decisions** for classification problems.
+This project demonstrates the implementation of a Decision Tree Classifier using the ID3 (Iterative Dichotomiser 3) algorithm.  
+The model uses entropy and information gain to build a decision tree, enabling interpretable, rule-based decisions for classification problems.
 
 ---
 
 ## Learning Outcomes
 By completing this project, you will be able to:
 
-- Understand **entropy**, **information gain**, and decision tree construction.
-- Build a decision tree using the **ID3 algorithm**.
+- Understand entropy information gain and decision tree construction.
+- Build a decision tree using the ID3 algorithm
 - Visualize and interpret decision-making in the tree.
 - Evaluate model performance using metrics such as accuracy, confusion matrix, and classification report.
 - Apply decision tree reasoning to other classification tasks.
@@ -30,8 +30,8 @@ By completing this project, you will be able to:
 
 ## Dataset
 
-**File:** `decision_tree_dataset.csv`  
-**Records:** 200 samples  
+File: `decision_tree_dataset.csv`  
+Records: 200 samples  
 
 | Feature | Description |
 |---------|-------------|
