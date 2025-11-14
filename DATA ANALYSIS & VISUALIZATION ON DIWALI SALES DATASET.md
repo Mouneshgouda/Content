@@ -90,7 +90,9 @@ print(df.head())
 print(df.info())
 print(df.describe())
 
-https://drive.google.com/file/d/1Vj5zrXCaZyDrMKQDPKdy8gT4MftqhM1z/view?usp=drive_link
+https://drive.google.com/file/d/1UImDcyCQb3gG59S-mRgyzGFf6s__buZR/view?usp=sharing
+
+https://drive.google.com/file/d/1TUMyLAB5h36HXa3EZ9km_Yo47TC0LDXl/view?usp=sharing
 ```
 
 ##  Task 2: Data Cleaning
@@ -101,7 +103,7 @@ df.drop(columns=['Status', 'unnamed1'], errors='ignore', inplace=True)
 df.dropna(inplace=True)
 df['Amount'] = df['Amount'].astype('int')
 
-https://drive.google.com/file/d/1GZk9CgF4peEd_Vi_Mc9FOQUEitB97wML/view?usp=drive_link
+https://drive.google.com/file/d/1ijvXwwxgJSX01L4HfapWAgxL51w2syN0/view?usp=sharing
 ```
 ##  Task 3: Age Group Analysis
 - Goal: Analyze total sales across age groups and gender.
@@ -111,7 +113,7 @@ plt.title(' Total Sales by Age Group and Gender')
 plt.ylabel('Total Amount')
 plt.show()
 
-https://drive.google.com/file/d/17AyRL_q5I5cQKLr8HZJpwwqVsuKpgdm0/view?usp=drive_link
+https://drive.google.com/file/d/1LVpSO25ixMwhPAppJSzMvFaTD4kuemZI/view?usp=sharing
 ```
 ##  Task 4: Occupation-Based Sales
 - Goal: Analyze how profession influences total purchases.
@@ -122,30 +124,23 @@ plt.xticks(rotation=45)
 plt.ylabel('Total Amount')
 plt.show()
 
-https://drive.google.com/file/d/1GoWexaXPIzfzxYnW5f-9ddL9K0kBQiti/view?usp=drive_link
+https://drive.google.com/file/d/1oO6-RxZMOV5EJ9U0QmQbueUXxWMgvUin/view?usp=sharing
 ```
-##  Task 5: Product Category Analysis
+##  Task 5: Product Category Analysis Of Top !0 Most Sold Product
 - Goal: Identify top-performing product categories.
 ```python
-sns.barplot(x='Product_Category', y='Amount', data=df, estimator=sum)
-plt.title(' Total Sales by Product Category')
+top_products = df.groupby('Product_ID')['Orders'].sum().sort_values(ascending=False).head(10)
+sns.barplot(x=top_products.index, y=top_products.values)
+plt.title('Top 10 Most Sold Products')
+plt.xlabel('Product ID')
+plt.ylabel('Number of Orders')
 plt.xticks(rotation=45)
-plt.ylabel('Total Amount')
 plt.show()
 
-https://drive.google.com/file/d/1d0sbrZkl5WhXF0Lp1GqMKWBk7hKgDhFO/view?usp=drive_link
-```
-##  Task 6: Top 10 Most Sold Products
-- Goal: Find most frequently purchased products.
-```python
-corr = df.corr(numeric_only=True)
-sns.heatmap(corr, annot=True, fmt='.2f', cmap='Blues')
-plt.title(' Correlation Heatmap')
-plt.show()
 
-https://drive.google.com/file/d/1vRAn7pcfT0RnQ1OBVWyUsTNd5vDPtA9I/view?usp=drive_link
+https://drive.google.com/file/d/1ivpfKZ1l4He97g3SF4E9wEmEZM1ePyrb/view?usp=sharing
 ```
-## Task 7: Correlation Heatmap
+## Task 6: Correlation Heatmap
 - Goal: Examine relationships among numerical variables.
 ```python
 corr = df.corr(numeric_only=True)
@@ -153,7 +148,7 @@ sns.heatmap(corr, annot=True, fmt='.2f', cmap='Blues')
 plt.title(' Correlation Heatmap')
 plt.show()
 
-https://drive.google.com/file/d/15AiQ0f2-CpMoyCPPPeMgPwssdbia-0oI/view?usp=drive_link
+https://drive.google.com/file/d/1mIsdZVW1KtAyK8FNh3DIM0krZ0XM3TQY/view?usp=drive_link
 ```
 ##  Inputs
 
