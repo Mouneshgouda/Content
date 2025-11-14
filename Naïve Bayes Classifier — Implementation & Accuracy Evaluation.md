@@ -81,7 +81,7 @@ for col in df.select_dtypes(include=['object']).columns:
 print("All categorical columns encoded successfully!")
 print(df.head())
 
-https://drive.google.com/file/d/1Efhg2uFSIsc0mIHnBRgIQeubF1i8iIJ8/view?usp=drive_link
+https://drive.google.com/file/d/17-eF68ONIU5r-MosK4iIiNS36KJbtr4c/view?usp=drive_link
 ```
 ## Task 2: Data Preprocessing
 - Goal: Handle missing values, encode categorical data, and prepare features for training.
@@ -96,7 +96,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 X = df.drop('Purchased', axis=1)
 y = df['Purchased']
 
-https://drive.google.com/file/d/16D-TgIUUukkCdoIV1a1tVPsIO8elPBsa/view?usp=sharing
+https://drive.google.com/file/d/1jZBF4x280kM4Y7ygfHzNh9qFqf3HdXYY/view?usp=drive_link
 ```
 ## Task 3: Split Data into Train & Test Sets
 - Goal: Separate data for training and testing the model.
@@ -104,7 +104,7 @@ https://drive.google.com/file/d/16D-TgIUUukkCdoIV1a1tVPsIO8elPBsa/view?usp=shari
 # Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-https://drive.google.com/file/d/1mfvdUT-bc4w3ed2BdSCOMhLvo8v9KgsS/view?usp=sharing
+https://drive.google.com/file/d/1wXYHSD_uogbyErwaPJ7nPbo1M4wDq6zj/view?usp=drive_link
 ```
 ## Task 4: Train the Naïve Bayes Classifier
 - Goal: Train a Gaussian Naïve Bayes model on the training set.
@@ -113,7 +113,7 @@ https://drive.google.com/file/d/1mfvdUT-bc4w3ed2BdSCOMhLvo8v9KgsS/view?usp=shari
 model = GaussianNB()
 model.fit(X_train, y_train)
 
-https://drive.google.com/file/d/1jGnBIVYaabcYsaZw4jxe0tdIM662xqJg/view?usp=sharing
+https://drive.google.com/file/d/1JYOpFimFx4OR7mTMq5b938hSEAKd8AhV/view?usp=drive_link
 ```
 ## Task 5: Test the Model
 - Goal: Predict on test data and compute accuracy.
@@ -124,20 +124,7 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Confusion Matrix:", confusion_matrix(y_test, y_pred))
 print("Classification Report:", classification_report(y_test, y_pred))
 
-https://drive.google.com/file/d/1oyUhFQXnJ71LagXA_rZOlVjkh6W2a23P/view?usp=sharing
-```
-##  Task 6: Evaluate Model Performance
-- Goal: Generate confusion matrix and classification report.
-```python
-cm = confusion_matrix(y_test, y_pred)
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
-plt.title(' Confusion Matrix')
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.show()
-print(" Classification Report:\n", classification_report(y_test, y_pred))
-
-https://drive.google.com/file/d/1aiTTWQ0NDpLB3FPg2SQ2JQ_wdQPuAwop/view?usp=sharing
+https://drive.google.com/file/d/1-L799GJtXievNq0fsEr05getl2jxcmIs/view?usp=drive_link
 ```
 ## Inputs
 
@@ -199,32 +186,4 @@ Although Naïve Bayes is a simple model, you can still ensure robust performance
 
 ---
 
- Tip:  
-Always visualize feature distributions and correlations before training — Naïve Bayes assumes feature independence, which helps improve prediction accuracy.
-
-##  Similar Approach Can Be Used For Other Problems
-
----
-
-### Example 1: Email Spam Detection
-
-Objective:  
-Build a Naïve Bayes model to classify emails as Spam or Not Spam based on their content.
-
-### Dataset:  
-emails.csv — contains email text, sender info, and a label (spam / ham).
-
-### Possible Tasks:
-1. Load and clean dataset (remove nulls and special characters).
-2. Convert text to numerical features using **TF-IDF Vectorizer**.
-3. Split into training and testing data.
-4. Train a **Multinomial Naïve Bayes** model.
-5. Evaluate accuracy, precision, and recall.
-6. Visualize word frequency and confusion matrix.
-
-### Expected Outputs:
-- Trained spam classifier.  
-- Accuracy and classification report.  
-- Insights on common spam words and sender patterns.
-
----
+ 
