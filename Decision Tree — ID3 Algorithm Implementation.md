@@ -61,55 +61,64 @@ Records: 200 samples
 
 ## Step-by-Step Approach
 
-### 1. Load and Explore Dataset
-```python
-import pandas as pd
+### 1. # Import Libraries
 
-df = pd.read_csv('decision_tree_dataset.csv')
-print(df.head())
-print(df.info())
-print(df.describe())
+```python
+# Decision Tree Classifier using ID3 Algorithm
+
+# Import Libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from sklearn import tree
+import matplotlib.pyplot as plt
+
+https://drive.google.com/file/d/1FKKLP9G4RBjmnY8vR_U_qZwhZL5070kQ/view?usp=drive_link
 ```
-### 2. Split Data into Features and Target
+### 2. Load Dataset
 ```c
+# Load Dataset
+df = pd.read_csv('decision_tree_dataset.csv')
+print("Dataset Head:\n", df.head())
+print("\nDataset Info:\n", df.info())
+print("\nDataset Description:\n", df.describe())
+
+https://drive.google.com/file/d/1kjXrVi259lJpH2aBVtcAdk12vqammNex/view?usp=drive_link
+
+```
+### 3. Split Data into Features and Target
+```
+# Split Data into Features and Target
 X = df.drop('Purchased', axis=1)
 y = df['Purchased']
-```
-### 3. Split Dataset into Training and Testing Sets
-```
-from sklearn.model_selection import train_test_split
 
+https://drive.google.com/file/d/1LFEcQswdWgZ0BjdW5S90yoR2_w3W1dLx/view?usp=drive_link
+
+```
+### 4. Split Dataset into Training and Testing Sets and Train Decision Tree Model using ID3
+```c
+# Split Dataset into Training and Testing Sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
-```
-### 4. Train Decision Tree Model using ID3
-```c
-from sklearn.tree import DecisionTreeClassifier
 
+
+# Train Decision Tree using ID3 (entropy)
 model = DecisionTreeClassifier(criterion='entropy', random_state=42)
 model.fit(X_train, y_train)
+
+https://drive.google.com/file/d/1XsqZMPwQAVd6sPPyZKzihiZwGeI6ni7R/view?usp=drive_link
+
 ```
+
 ### 5. Evaluate Model
 ```c
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-
+# Evaluate Model
 y_pred = model.predict(X_test)
 print("Accuracy:", round(accuracy_score(y_test, y_pred) * 100, 2), "%")
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
-```
-### 6. Visualize the Decision Tree
-```c
-from sklearn import tree
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(15,8))
-tree.plot_tree(
-    model, filled=True, feature_names=X.columns, class_names=['No', 'Yes']
-)
-plt.title("Decision Tree Visualization (ID3 Algorithm)")
-plt.show()
 ```
 # Decision Tree Classifier using ID3 Algorithm
 
@@ -133,7 +142,7 @@ plt.show()
 ## Google Colab Link
 
 You can run this project online using Google Colab:  
- [**Open in Google Colab**](https://colab.research.google.com/drive/1lMCfn0Kq8DypMGhXrb2B58h3otnsh7Bm?usp=sharing)
+ [**Open in Google Colab**](https://colab.research.google.com/drive/1gKamezxBtJoDz7yxA6W_KPLBWU6ohnAC?usp=sharing)
 
 
 ## Testing and Validation
