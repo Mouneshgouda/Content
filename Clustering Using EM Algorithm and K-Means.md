@@ -1,12 +1,12 @@
-# 🔍 Clustering Using EM Algorithm and K-Means
+# Clustering Using EM Algorithm and K-Means
 
-## 🎯 Objective
+## Objective
 The objective of this project is to **apply the Expectation-Maximization (EM) algorithm** for clustering a dataset and compare its results with the **K-Means algorithm** using the same data.  
 Both algorithms will be evaluated based on their clustering effectiveness and visualization of the data points.
 
 ---
 
-## 🧠 Learning Outcomes
+## Learning Outcomes
 After completing this exercise, students will be able to:
 - Understand the concept of **unsupervised learning** and clustering.
 - Implement **K-Means** and **EM (Gaussian Mixture Model)** algorithms using Python.
@@ -15,7 +15,7 @@ After completing this exercise, students will be able to:
 
 ---
 
-## 🧩 Basic Concepts Required
+## Basic Concepts Required
 
 | Concept | Description |
 |----------|--------------|
@@ -26,7 +26,7 @@ After completing this exercise, students will be able to:
 
 ---
 
-## 💾 About the Dataset
+## About the Dataset
 - **Name:** `clustering_data.csv`  
 - **Attributes:** `Feature1`, `Feature2`  
 - **Type:** Synthetic dataset generated for clustering tasks  
@@ -35,7 +35,7 @@ After completing this exercise, students will be able to:
 
 ---
 
-## 🧰 Software and Libraries
+## Software and Libraries
 
 | Tool | Purpose |
 |------|----------|
@@ -47,9 +47,9 @@ After completing this exercise, students will be able to:
 
 ---
 
-## ⚙️ Tasks and Step-by-Step Approach
+## Tasks and Step-by-Step Approach
 
-### 🧠 Task 1: Load and Explore Dataset
+### Task 1: Load and Explore Dataset
 ```python
 import pandas as pd
 import numpy as np
@@ -68,7 +68,7 @@ X = scaler.fit_transform(df)
 https://drive.google.com/file/d/1Nu0yeOTn43Gwb0VgGdnqmaoj7LT65br-/view?usp=sharing
 ```
 
-## 💠 Task 2: K-Means Clustering
+## Task 2: K-Means Clustering
 ```python
 from sklearn.cluster import KMeans
 
@@ -81,14 +81,14 @@ df['KMeans_Cluster'] = kmeans_labels
 
 # Visualize results
 plt.scatter(X[:, 0], X[:, 1], c=kmeans_labels, cmap='viridis')
-plt.title('📊 K-Means Clustering')
+plt.title(' K-Means Clustering')
 plt.xlabel('Feature1')
 plt.ylabel('Feature2')
 plt.show()
 
 https://drive.google.com/file/d/1NuPeN7P3DM-ByHidM3Uoen9IaW3WoRf0/view?usp=sharing
 ```
-## 🔁 Task 3: EM Algorithm (Gaussian Mixture Model)
+## Task 3: EM Algorithm (Gaussian Mixture Model)
 ```python
 from sklearn.mixture import GaussianMixture
 
@@ -100,14 +100,14 @@ df['EM_Cluster'] = gmm_labels
 
 # Visualize EM results
 plt.scatter(X[:, 0], X[:, 1], c=gmm_labels, cmap='coolwarm')
-plt.title('🤖 EM (Gaussian Mixture) Clustering')
+plt.title(' EM (Gaussian Mixture) Clustering')
 plt.xlabel('Feature1')
 plt.ylabel('Feature2')
 plt.show()
 
 https://drive.google.com/file/d/1SZ7FIRufLQ8q-5XB22TSlW8l7O6_i10p/view?usp=sharing
 ```
-## 📏 Task 4: Evaluation and Comparison
+## Task 4: Evaluation and Comparison
 ```python
 from sklearn.metrics import silhouette_score
 
@@ -119,7 +119,7 @@ print("EM (GMM) Silhouette Score:", gmm_score)
 
 https://drive.google.com/file/d/1q3XgoTYk7qIhIBx7X6Cb347Op-J5QRzK/view?usp=sharing
 ```
-## 🧾 Inputs
+## Inputs
 
 | Input | Description |
 |--------|-------------|
@@ -129,7 +129,7 @@ https://drive.google.com/file/d/1q3XgoTYk7qIhIBx7X6Cb347Op-J5QRzK/view?usp=shari
 
 ---
 
-## 🎯 Expected Outputs
+## Expected Outputs
 
 | Output | Description |
 |--------|-------------|
@@ -139,16 +139,16 @@ https://drive.google.com/file/d/1q3XgoTYk7qIhIBx7X6Cb347Op-J5QRzK/view?usp=shari
 
 ---
 
-## 🔗 Google Colab Link
+## Google Colab Link
 
 Run this project online using Google Colab:  
-👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1wmhVfJsGslEZSi5LOQKLILDhfFtWQDdX?usp=sharing)
+[**Open in Google Colab**](https://colab.research.google.com/drive/1wmhVfJsGslEZSi5LOQKLILDhfFtWQDdX?usp=sharing)
 
 ---
 
-## 🧪 Testing and Validation
+## Testing and Validation
 
-### ✅ 1. Test with Known Patterns
+###  1. Test with Known Patterns
 Use a simple dataset (like the one provided) to validate clustering visually.
 
 **Expected Behavior:**
@@ -157,14 +157,14 @@ Use a simple dataset (like the one provided) to validate clustering visually.
 
 ---
 
-### 📏 2. Validate Model Accuracy
+### 2. Validate Model Accuracy
 - Compare **Silhouette Scores** between EM and K-Means.  
 - Visualize **cluster separation** and **centroids**.  
 - Adjust `n_clusters` to observe the impact on performance.
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue | Likely Cause | Solution |
 |--------|---------------|----------|
@@ -174,9 +174,9 @@ Use a simple dataset (like the one provided) to validate clustering visually.
 | **Overlapping clusters** | High variance in features | Normalize data or reduce dimensions using PCA. |
 
 
-## 💡 Example Projects Using Similar Approach
+##  Example Projects Using Similar Approach
 
-### 📊 Example 1: Customer Segmentation for Retail Business
+###  Example 1: Customer Segmentation for Retail Business
 **Objective:**  
 Segment customers based on their shopping behavior to help a retail company identify high-value customers and personalize marketing campaigns.
 
@@ -195,7 +195,7 @@ Segment customers based on their shopping behavior to help a retail company iden
 
 ---
 
-### 🌦️ Example 2: Weather Pattern Clustering
+###  Example 2: Weather Pattern Clustering
 **Objective:**  
 Use EM and K-Means to identify weather types (e.g., sunny, cloudy, rainy) from meteorological data.
 
@@ -214,7 +214,7 @@ Use EM and K-Means to identify weather types (e.g., sunny, cloudy, rainy) from m
 
 ---
 
-### 🧠 Example 3: Image Color Compression (Optional Advanced Task)
+### Example 3: Image Color Compression (Optional Advanced Task)
 **Objective:**  
 Reduce image colors using clustering for compression and segmentation.
 
@@ -232,4 +232,4 @@ Extracted RGB pixel values from an image file.
 
 ---
 
-✅ *These examples follow the same structured workflow: load → preprocess → cluster → visualize → interpret.*
+*These examples follow the same structured workflow: load → preprocess → cluster → visualize → interpret.*
