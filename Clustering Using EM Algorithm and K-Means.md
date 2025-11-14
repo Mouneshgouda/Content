@@ -65,7 +65,7 @@ print(df.head())
 scaler = StandardScaler()
 X = scaler.fit_transform(df)
 
-https://drive.google.com/file/d/1Nu0yeOTn43Gwb0VgGdnqmaoj7LT65br-/view?usp=sharing
+https://drive.google.com/file/d/1l7uWC8Mu7WCZ29oAy1PZd80qNSNr6XAp/view?usp=drive_link
 ```
 
 ## Task 2: K-Means Clustering
@@ -86,7 +86,7 @@ plt.xlabel('Feature1')
 plt.ylabel('Feature2')
 plt.show()
 
-https://drive.google.com/file/d/1NuPeN7P3DM-ByHidM3Uoen9IaW3WoRf0/view?usp=sharing
+https://drive.google.com/file/d/1wGnmR_xbRS0gZPJaS9tRmvI6WqFXRJWG/view?usp=sharing
 ```
 ## Task 3: EM Algorithm (Gaussian Mixture Model)
 ```python
@@ -105,7 +105,7 @@ plt.xlabel('Feature1')
 plt.ylabel('Feature2')
 plt.show()
 
-https://drive.google.com/file/d/1SZ7FIRufLQ8q-5XB22TSlW8l7O6_i10p/view?usp=sharing
+https://drive.google.com/file/d/1wGnmR_xbRS0gZPJaS9tRmvI6WqFXRJWG/view?usp=drive_link
 ```
 ## Task 4: Evaluation and Comparison
 ```python
@@ -117,7 +117,7 @@ gmm_score = silhouette_score(X, gmm_labels)
 print("K-Means Silhouette Score:", kmeans_score)
 print("EM (GMM) Silhouette Score:", gmm_score)
 
-https://drive.google.com/file/d/1q3XgoTYk7qIhIBx7X6Cb347Op-J5QRzK/view?usp=sharing
+https://drive.google.com/file/d/14s45HEEzqodT6kdACuk6lHgATTZsvUBi/view?usp=drive_link
 ```
 ## Inputs
 
