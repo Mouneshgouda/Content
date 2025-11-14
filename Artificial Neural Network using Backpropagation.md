@@ -1,14 +1,14 @@
-# 🧠 Artificial Neural Network using Backpropagation  
+# Artificial Neural Network using Backpropagation  
 
 ---
 
-## 🎯 Objective
+## Objective
 To build and train an **Artificial Neural Network (ANN)** using the **Backpropagation Algorithm** to predict **customer churn** (whether a customer will leave the bank or not).  
 We use the **Churn Modelling dataset** from Kaggle to train, test, and evaluate model performance.
 
 ---
 
-## 🧠 Learning Outcomes
+## Learning Outcomes
 - Understand how a basic **ANN** works using **Backpropagation**.  
 - Perform **data preprocessing** for real-world datasets.  
 - Evaluate model performance using metrics such as **accuracy** and **loss**.  
@@ -16,7 +16,7 @@ We use the **Churn Modelling dataset** from Kaggle to train, test, and evaluate 
 
 ---
 
-## 🧩 Basic Concepts Required
+## Basic Concepts Required
 - Neural network structure: Input, Hidden, and Output layers  
 - Activation functions: ReLU, Sigmoid  
 - Gradient Descent and Backpropagation  
@@ -24,7 +24,7 @@ We use the **Churn Modelling dataset** from Kaggle to train, test, and evaluate 
 
 ---
 
-## 💾 About the Dataset
+## About the Dataset
 **Dataset Name:** `Churn_Modelling.csv`  
 **Source:** Kaggle  
 
@@ -49,9 +49,9 @@ This dataset contains customer demographics and banking details to predict wheth
 
 ---
 
-## 🧰 Software and Libraries
+## Software and Libraries
 
-### 💻 Software Requirements
+### Software Requirements
 
 | Software | Description |
 |-----------|-------------|
@@ -63,15 +63,15 @@ This dataset contains customer demographics and banking details to predict wheth
 
 ---
 
-### 📦 Required Python Libraries
+### Required Python Libraries
 
 Install all dependencies using:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras
 
 ```
-## ⚙️ Tasks and Step-by-Step Approach
-- 🧠 Task 1: Load and Explore Dataset
+## Tasks and Step-by-Step Approach
+-  Task 1: Load and Explore Dataset
 ```python
 import pandas as pd
 import numpy as np
@@ -111,7 +111,7 @@ X = sc.fit_transform(X)
 
 https://drive.google.com/file/d/1ewRID0qNciXtGuepBnaergGjg17bauVm/view?usp=sharing
 ```
-## 🧩 Task 3: Build the ANN Model
+## Task 3: Build the ANN Model
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -137,7 +137,7 @@ history = model.fit(X, y, batch_size=32, epochs=50, validation_split=0.2)
 
 https://drive.google.com/file/d/1r1ZEObl3UnW8BSQaQy5eywCqu04ydFNF/view?usp=sharing
 ```
-## 📊 Task 5: Visualize Accuracy and Loss
+##  Task 5: Visualize Accuracy and Loss
 ```python
 plt.figure(figsize=(10,5))
 plt.subplot(1,2,1)
@@ -155,7 +155,7 @@ plt.show()
 
 https://drive.google.com/file/d/1OG1k6IxfQY997wgJt3M-kv4cts1O8rLa/view?usp=sharing
 ```
-## 🧮 Task 6: Evaluate the Model
+##  Task 6: Evaluate the Model
 ```python
 from sklearn.metrics import confusion_matrix, classification_report
 y_pred = (model.predict(X) > 0.5).astype(int)
@@ -164,7 +164,7 @@ print(classification_report(y, y_pred))
 
 https://drive.google.com/file/d/1L0cQN1Zf7pJUqEozKe4VTMHDMYavTQCP/view?usp=sharing
 ```
-## 🧾 Inputs
+##  Inputs
 
 | Input | Description |
 |--------|-------------|
@@ -174,7 +174,7 @@ https://drive.google.com/file/d/1L0cQN1Zf7pJUqEozKe4VTMHDMYavTQCP/view?usp=shari
 
 ---
 
-## 🎯 Expected Outputs
+##  Expected Outputs
 
 | Output | Description |
 |--------|-------------|
@@ -185,26 +185,26 @@ https://drive.google.com/file/d/1L0cQN1Zf7pJUqEozKe4VTMHDMYavTQCP/view?usp=shari
 
 ---
 
-## 🔗 Google Colab Link
+##  Google Colab Link
 
 Run this project online using Google Colab:  
 👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1Vxeja1UEweJElQkiNCR34b44rDoUMCpw?usp=sharing)  
 
 ---
 
-## 🧪 Testing and Validation
+##  Testing and Validation
 
-### ✅ 1. Test with Known Patterns
+###  1. Test with Known Patterns
 - Customers with **low balance** or **low activity** are more likely to churn.  
 - **Higher credit score** or **longer tenure** → lower churn rate.  
 
-### ✅ 2. Validate Model Accuracy
+###  2. Validate Model Accuracy
 - Use `model.evaluate(X_test, y_test)` if dataset is split.  
 - Adjust **hidden layers**, **neurons**, and **epochs** to optimize performance.  
 
 ---
 
-## 🧩 Troubleshooting Tips
+##  Troubleshooting Tips
 
 | Issue | Likely Cause | Solution |
 |--------|---------------|-----------|
@@ -213,7 +213,7 @@ Run this project online using Google Colab:
 | Overfitting | Too many epochs / no dropout | Add dropout or early stopping |
 | Slow Training | Large dataset or high epochs | Reduce epochs or use GPU in Colab |
 
-## 💡 Example 1: Bank Customer Churn Prediction
+##  Example 1: Bank Customer Churn Prediction
 
 **Objective:**  
 Predict whether a customer will leave the bank (churn) based on attributes such as credit score, age, balance, and activity level.
@@ -237,7 +237,7 @@ Predict whether a customer will leave the bank (churn) based on attributes such 
 
 ---
 
-## 💡 Example 2: Diabetes Prediction using ANN
+##  Example 2: Diabetes Prediction using ANN
 
 **Objective:**  
 Build an ANN to classify whether a patient has diabetes based on medical attributes.
