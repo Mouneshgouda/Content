@@ -4,8 +4,8 @@
 ---
 
 ## Objective
-The objective of this project is to compare three major supervised learning algorithms — **Linear Regression**, **Support Vector Machine (SVM)**, and **Decision Tree** — on real-world data.  
-We will evaluate their accuracy, interpretability, and predictive performance using a dataset containing **employee demographic and job-related details**.
+The objective of this project is to compare three major supervised learning algorithms — Linear Regression, Support Vector Machine (SVM), and Decision Tree — on real-world data.  
+We will evaluate their accuracy, interpretability, and predictive performance using a dataset containing employee demographic and job-related details.
 
 ---
 
@@ -14,16 +14,16 @@ After completing this project, you will be able to:
 - Understand the fundamental differences between regression and classification models.  
 - Implement Linear Regression, Support Vector Machine, and Decision Tree models in Python.  
 - Perform preprocessing (encoding, scaling, and splitting) on real-world datasets.  
-- Compare model performance using metrics like **R² Score, Accuracy, Confusion Matrix**, and **Classification Report**.  
+- Compare model performance using metrics like R² Score, Accuracy, Confusion Matrix**, and **Classification Report.  
 - Visualize prediction results and interpret model behavior.
 
 ---
 
 ## Basic Concepts Required
 Before you begin, ensure you are familiar with:
-- Basics of **Supervised Learning**  
-- Difference between **Regression** and **Classification**  
-- Concepts of **Overfitting**, **Accuracy**, and **Decision Boundaries**  
+- Basics of Supervised Learning 
+- Difference between Regression and Classification 
+- Concepts of Overfitting, Accuracy, and Decision Boundaries  
 - Python libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
 
 ---
@@ -32,7 +32,7 @@ Before you begin, ensure you are familiar with:
 You will use two datasets:
 
 ###  `supervised_regression_data.csv`
-Predict **Salary** based on features:
+Predict Salary based on features:
 | Feature | Description |
 |----------|--------------|
 | Age | Age of employee |
@@ -41,8 +41,8 @@ Predict **Salary** based on features:
 | City | Location of employee |
 | Salary | Annual income (target variable) |
 
-###  `supervised_classification_data.csv`
-Predict **Attrition (Yes/No)** based on similar attributes:
+###  supervised_classification_data.csv
+Predict Attrition (Yes/No) based on similar attributes:
 | Feature | Description |
 |----------|--------------|
 | Age | Age of employee |
@@ -58,10 +58,10 @@ Predict **Attrition (Yes/No)** based on similar attributes:
 ### Software Requirements
 | Software | Description |
 |-----------|-------------|
-| **Python (≥3.8)** | Core programming language used for model implementation |
-| **Google Colab / Jupyter Notebook** | Interactive environment for running and visualizing results |
-| **Anaconda (optional)** | Provides Python environment and package management |
-| **GitHub / Google Drive** | For saving, sharing, and managing project files |
+| Python (≥3.8)* | Core programming language used for model implementation |
+| Google Colab / Jupyter Notebook | Interactive environment for running and visualizing results |
+| Anaconda (optional) | Provides Python environment and package management |
+| GitHub / Google Drive| For saving, sharing, and managing project files |
 
 ---
 
@@ -200,9 +200,9 @@ You can run this project online using Google Colab:
 ## Testing and Validation
 
 ### 1. Test with Known Patterns
-- Salary increases with **Experience**.  
+- Salary increases with Experience.  
 - Employees with **higher education** tend to earn more.  
-- **Attrition** may be higher among younger, less-experienced employees.
+- Attrition may be higher among younger, less-experienced employees.
 
 ### 2. Validate Model Accuracy
 - Use `cross_val_score()` for model stability.  
@@ -218,77 +218,4 @@ You can run this project online using Google Colab:
 | `ValueError: could not convert string to float` | Unencoded categorical data | Use `LabelEncoder()` or `get_dummies()` |
 | Low Accuracy | Overfitting or unscaled data | Adjust `max_depth` or apply scaling |
 | Empty predictions | Wrong target selection | Ensure correct target column is used |
-
-## Example 1: Employee Salary Prediction (Regression)
-
-**Objective:**  
-Predict the **salary** of employees based on factors like age, experience, education level, and city using **Linear Regression**.
-
-**Dataset:**  
-`supervised_regression_data.csv` — contains employee demographic and professional details such as:
-- Age  
-- Experience  
-- Education_Level (High School, Bachelor, Master)  
-- City  
-- Salary (Target Variable)
-
-**Possible Tasks:**
-- Preprocess data (handle missing values, encode categorical columns).  
-- Train Linear Regression to predict employee salary.  
-- Evaluate model using **R² Score** and visualize actual vs predicted salaries.  
-- Generate insights on how **experience** and **education level** affect salary.
-
-**Expected Output:**
-- R² Score around **0.80–0.90**  
-- Scatter plot showing **Actual vs Predicted Salary**  
-- Insight: Employees with higher education and more experience earn more.
-
----
-
-## Example 2: Employee Attrition Prediction (Classification)
-
-**Objective:**  
-Predict whether an employee is likely to leave the company based on demographics and job profile using **Support Vector Machine (SVM)** and **Decision Tree** classifiers.
-
-**Dataset:**  
-`supervised_classification_data.csv` — includes:
-- Age  
-- Experience  
-- Education_Level  
-- City  
-- Attrition (Target Variable: Yes/No)
-
-**Possible Tasks:**
-- Encode categorical variables using **LabelEncoder**.  
-- Split data into training and testing sets.  
-- Train and compare **SVM** and **Decision Tree** classifiers.  
-- Evaluate using **Accuracy**, **Confusion Matrix**, and **Classification Report**.
-
-**Expected Output:**
-- **SVM Accuracy:** ~0.85–0.95  
-- **Decision Tree Accuracy:** ~0.75–0.90  
-- Confusion matrix and classification report  
-- Insight: Younger, less experienced employees have a higher chance of attrition.
-
----
-
-## Example 3: Combined Model Comparison
-
-**Objective:**  
-Compare regression and classification results to understand how different algorithms perform across tasks.
-
-**Possible Tasks:**
-- Evaluate **Linear Regression**, **SVM**, and **Decision Tree** on their respective datasets.  
-- Summarize results in a comparison table.  
-- Visualize model performance using bar charts or heatmaps.
-
-**Expected Output:**
-| Model | Type | Metric | Expected Score |
-|--------|------|---------|----------------|
-| Linear Regression | Regression | R² Score | 0.80–0.90 |
-| SVM | Classification | Accuracy | 0.80–0.95 |
-| Decision Tree | Classification | Accuracy | 0.75–0.90 |
-
----
-
 
