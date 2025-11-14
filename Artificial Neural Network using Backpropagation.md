@@ -86,7 +86,7 @@ print(df.describe())
 
 https://drive.google.com/file/d/1eDjwVw8p4PKsKg0Kn5lIpoWZi8HzrLVQ/view?usp=sharing
 ```
-## 🧹 Task 2: Data Preprocessing
+##  Task 2: Data Preprocessing
 - Drop unnecessary columns (RowNumber, CustomerId, Surname)
 - Encode categorical data (Gender, Geography)
 - Split into features (X) and labels (y)
@@ -131,7 +131,7 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 
 https://drive.google.com/file/d/1wuci6cZ4gqb-1mOYbWfGFZr3bQj0N1M4/view?usp=sharing
 ```
-## 🚀 Task 4: Train the Model
+## Task 4: Train the Model
 ```python
 history = model.fit(X, y, batch_size=32, epochs=50, validation_split=0.2)
 
@@ -188,7 +188,7 @@ https://drive.google.com/file/d/1L0cQN1Zf7pJUqEozKe4VTMHDMYavTQCP/view?usp=shari
 ##  Google Colab Link
 
 Run this project online using Google Colab:  
-👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1Vxeja1UEweJElQkiNCR34b44rDoUMCpw?usp=sharing)  
+ [**Open in Google Colab**](https://colab.research.google.com/drive/1Vxeja1UEweJElQkiNCR34b44rDoUMCpw?usp=sharing)  
 
 ---
 
