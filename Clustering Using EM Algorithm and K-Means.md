@@ -1,15 +1,15 @@
 # Clustering Using EM Algorithm and K-Means
 
 ## Objective
-The objective of this project is to **apply the Expectation-Maximization (EM) algorithm** for clustering a dataset and compare its results with the **K-Means algorithm** using the same data.  
+The objective of this project is to apply the Expectation-Maximization (EM) algorithm for clustering a dataset and compare its results with the K-Means algorithm using the same data.  
 Both algorithms will be evaluated based on their clustering effectiveness and visualization of the data points.
 
 ---
 
 ## Learning Outcomes
 After completing this exercise, students will be able to:
-- Understand the concept of **unsupervised learning** and clustering.
-- Implement **K-Means** and **EM (Gaussian Mixture Model)** algorithms using Python.
+- Understand the concept of unsupervised learning and clustering.
+- Implement K-Mean and **EM (Gaussian Mixture Model) algorithms using Python.
 - Visualize cluster boundaries and analyze algorithm performance.
 - Interpret results and compare EM and K-Means approaches.
 
@@ -19,18 +19,18 @@ After completing this exercise, students will be able to:
 
 | Concept | Description |
 |----------|--------------|
-| **K-Means Algorithm** | Partitions data into *k* clusters by minimizing the within-cluster variance. |
-| **Expectation-Maximization (EM)** | Probabilistic model-based clustering algorithm using Gaussian Mixture Models (GMM). |
-| **Clustering Evaluation** | Techniques to measure performance using metrics like silhouette score and log-likelihood. |
-| **Standardization** | Scaling numerical data for better algorithm convergence. |
+| K-Means Algorithm | Partitions data into *k* clusters by minimizing the within-cluster variance. |
+| Expectation-Maximization (EM | Probabilistic model-based clustering algorithm using Gaussian Mixture Models (GMM). |
+| Clustering Evaluation| Techniques to measure performance using metrics like silhouette score and log-likelihood. |
+| Standardization | Scaling numerical data for better algorithm convergence. |
 
 ---
 
 ## About the Dataset
-- **Name:** `clustering_data.csv`  
-- **Attributes:** `Feature1`, `Feature2`  
-- **Type:** Synthetic dataset generated for clustering tasks  
-- **Description:**  
+- Name: `clustering_data.csv`  
+- Attributes: `Feature1`, `Feature2`  
+- Type: Synthetic dataset generated for clustering tasks  
+- Description: 
   The dataset contains 150 data points with two continuous features representing three natural clusters.
 
 ---
@@ -39,11 +39,11 @@ After completing this exercise, students will be able to:
 
 | Tool | Purpose |
 |------|----------|
-| **Python** | Programming language |
-| **pandas** | Data handling |
-| **numpy** | Numerical operations |
-| **matplotlib / seaborn** | Visualization |
-| **scikit-learn** | Machine learning algorithms (KMeans, GaussianMixture) |
+| Python | Programming language |
+| pandas | Data handling |
+| numpy| Numerical operations |
+| matplotlib / seaborn | Visualization |
+| scikit-learn | Machine learning algorithms (KMeans, GaussianMixture) |
 
 ---
 
@@ -133,9 +133,9 @@ https://drive.google.com/file/d/1q3XgoTYk7qIhIBx7X6Cb347Op-J5QRzK/view?usp=shari
 
 | Output | Description |
 |--------|-------------|
-| **Clustered Data** | Dataset with assigned cluster labels |
-| **Visualizations** | Scatter plots showing clusters for K-Means and EM |
-| **Evaluation Metrics** | Silhouette scores and comparison summary |
+| Clustered Data | Dataset with assigned cluster labels |
+| Visualizations | Scatter plots showing clusters for K-Means and EM |
+| Evaluation Metrics | Silhouette scores and comparison summary |
 
 ---
 
@@ -151,15 +151,15 @@ Run this project online using Google Colab:
 ###  1. Test with Known Patterns
 Use a simple dataset (like the one provided) to validate clustering visually.
 
-**Expected Behavior:**
-- Both algorithms should form **3 distinct clusters**.  
-- EM may provide **softer boundaries** than K-Means.
+Expected Behavior:
+- Both algorithms should form 3 distinct clusters.  
+- EM may provide softer boundaries than K-Means.
 
 ---
 
 ### 2. Validate Model Accuracy
-- Compare **Silhouette Scores** between EM and K-Means.  
-- Visualize **cluster separation** and **centroids**.  
+- Compare Silhouette Scores between EM and K-Means.  
+- Visualize cluster separation and **centroids.  
 - Adjust `n_clusters` to observe the impact on performance.
 
 ---
@@ -170,66 +170,6 @@ Use a simple dataset (like the one provided) to validate clustering visually.
 |--------|---------------|----------|
 | `FileNotFoundError` | Dataset not found | Upload `clustering_data.csv` or correct file path. |
 | `ValueError: could not convert string to float` | Non-numeric data in dataset | Ensure all features are numeric. |
-| **Poor clustering** | Unscaled features or incorrect `k` value | Apply scaling and experiment with different `n_clusters`. |
-| **Overlapping clusters** | High variance in features | Normalize data or reduce dimensions using PCA. |
+| Poor clustering | Unscaled features or incorrect `k` value | Apply scaling and experiment with different `n_clusters`. |
+| Overlapping clusters | High variance in features | Normalize data or reduce dimensions using PCA. |
 
-
-##  Example Projects Using Similar Approach
-
-###  Example 1: Customer Segmentation for Retail Business
-**Objective:**  
-Segment customers based on their shopping behavior to help a retail company identify high-value customers and personalize marketing campaigns.
-
-**Dataset:**  
-`Customer_Segmentation.csv` — contains attributes such as `Age`, `Annual_Income`, and `Spending_Score`.
-
-**Possible Tasks:**
-- Load and preprocess data.
-- Apply **K-Means** and **EM (GMM)** to cluster customers.
-- Visualize clusters based on income vs. spending score.
-- Compare which algorithm forms more meaningful customer groups.
-
-**Expected Output:**
-- Clear separation of customer groups (e.g., low spenders, medium, high-value).  
-- Insights on customer behavior patterns useful for business strategy.
-
----
-
-###  Example 2: Weather Pattern Clustering
-**Objective:**  
-Use EM and K-Means to identify weather types (e.g., sunny, cloudy, rainy) from meteorological data.
-
-**Dataset:**  
-`Weather_Data.csv` — includes features such as `Temperature`, `Humidity`, `Pressure`, and `WindSpeed`.
-
-**Possible Tasks:**
-- Standardize numeric features for clustering.
-- Apply **K-Means** and **EM** for pattern detection.
-- Visualize clusters on temperature vs. humidity scatterplots.
-- Compare clustering consistency with known weather patterns.
-
-**Expected Output:**
-- Grouping of weather conditions into natural clusters.  
-- EM provides smoother cluster boundaries than K-Means, useful for real-world variability.
-
----
-
-### Example 3: Image Color Compression (Optional Advanced Task)
-**Objective:**  
-Reduce image colors using clustering for compression and segmentation.
-
-**Dataset:**  
-Extracted RGB pixel values from an image file.
-
-**Possible Tasks:**
-- Convert image pixels into a dataset of RGB values.
-- Apply **K-Means** and **EM** to cluster similar colors.
-- Reconstruct the image using reduced color clusters.
-
-**Expected Output:**
-- Compressed image with fewer colors.  
-- EM produces more realistic transitions, while K-Means is faster.
-
----
-
-*These examples follow the same structured workflow: load → preprocess → cluster → visualize → interpret.*
