@@ -1,15 +1,15 @@
-# 🤖 Comparison of Supervised Learning Algorithms  
+# Comparison of Supervised Learning Algorithms  
 ### (Linear Regression, Support Vector Machine, Decision Tree)
 
 ---
 
-## 🎯 Objective
+## Objective
 The objective of this project is to compare three major supervised learning algorithms — **Linear Regression**, **Support Vector Machine (SVM)**, and **Decision Tree** — on real-world data.  
 We will evaluate their accuracy, interpretability, and predictive performance using a dataset containing **employee demographic and job-related details**.
 
 ---
 
-## 🧠 Learning Outcomes
+## Learning Outcomes
 After completing this project, you will be able to:
 - Understand the fundamental differences between regression and classification models.  
 - Implement Linear Regression, Support Vector Machine, and Decision Tree models in Python.  
@@ -19,7 +19,7 @@ After completing this project, you will be able to:
 
 ---
 
-## 🧩 Basic Concepts Required
+## Basic Concepts Required
 Before you begin, ensure you are familiar with:
 - Basics of **Supervised Learning**  
 - Difference between **Regression** and **Classification**  
@@ -28,10 +28,10 @@ Before you begin, ensure you are familiar with:
 
 ---
 
-## 💾 About the Dataset
+## About the Dataset
 You will use two datasets:
 
-### 1️⃣ `supervised_regression_data.csv`
+###  `supervised_regression_data.csv`
 Predict **Salary** based on features:
 | Feature | Description |
 |----------|--------------|
@@ -41,7 +41,7 @@ Predict **Salary** based on features:
 | City | Location of employee |
 | Salary | Annual income (target variable) |
 
-### 2️⃣ `supervised_classification_data.csv`
+###  `supervised_classification_data.csv`
 Predict **Attrition (Yes/No)** based on similar attributes:
 | Feature | Description |
 |----------|--------------|
@@ -53,9 +53,9 @@ Predict **Attrition (Yes/No)** based on similar attributes:
 
 ---
 
-## 🧰 Software and Libraries
+## Software and Libraries
 
-### 💻 Software Requirements
+### Software Requirements
 | Software | Description |
 |-----------|-------------|
 | **Python (≥3.8)** | Core programming language used for model implementation |
@@ -65,7 +65,7 @@ Predict **Attrition (Yes/No)** based on similar attributes:
 
 ---
 
-### 📦 Required Python Libraries
+### Required Python Libraries
 Install the required libraries before running the notebook:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
@@ -86,8 +86,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 https://drive.google.com/file/d/1SA1dZneaNNWUInHrnlJzeT5yA328mIJy/view?usp=sharing
 ```
-## ⚙️ Tasks and Step-by-Step Approach
-- 🧠 Task 1: Load and Explore Dataset
+## Tasks and Step-by-Step Approach
+-  Task 1: Load and Explore Dataset
 ```python
 df_reg = pd.read_csv('supervised_regression_data.csv')
 df_cls = pd.read_csv('supervised_classification_data.csv')
@@ -97,7 +97,7 @@ print(df_cls.head())
 
 https://drive.google.com/file/d/14GmW6yN-aPKwFIdmIIJ-fupfzT3BI5VA/view?usp=sharing
 ```
-## 🧹 Task 2: Data Preprocessing
+## Task 2: Data Preprocessing
 - Convert categorical data into numeric using LabelEncoder and scale features.
 ```python
 le = LabelEncoder()
@@ -122,7 +122,7 @@ Xc_train, Xc_test, yc_train, yc_test = train_test_split(X_cls, y_cls, test_size=
 
 https://drive.google.com/file/d/1JiPUudVxqF8lC9geC6pmDBvA0f27Ineo/view?usp=sharing
 ```
-## 📈 Task 3: Linear Regression (Regression)
+## Task 3: Linear Regression (Regression)
 ```python
 reg = LinearRegression()
 reg.fit(Xr_train, yr_train)
@@ -135,7 +135,7 @@ plt.show()
 
 https://drive.google.com/file/d/1ZiFr38uRzX7bAtsbfnIDOJOazErzezxE/view?usp=sharing
 ```
-## 🧮 Task 4: Support Vector Machine (Classification)
+## Task 4: Support Vector Machine (Classification)
 ```python
 svm = SVC(kernel='linear')
 svm.fit(Xc_train, yc_train)
@@ -147,7 +147,7 @@ print(classification_report(yc_test, yc_pred_svm))
 
 https://drive.google.com/file/d/1cc6ZZ1d1StSdZ0eOW2lv8M8Q4vM0h8KO/view?usp=sharing
 ```
-## 🌳 Task 5: Decision Tree (Classification)
+## Task 5: Decision Tree (Classification)
 ```python
 dt = DecisionTreeClassifier(max_depth=4, random_state=42)
 dt.fit(Xc_train, yc_train)
@@ -159,7 +159,7 @@ print(classification_report(yc_test, yc_pred_dt))
 
 https://drive.google.com/file/d/1jpgKn6MEAjYPJIUr3Q1ghGzgn75OkCs4/view?usp=sharing
 ```
-## 📊 Task 6: Compare Results
+## Task 6: Compare Results
 
 | Model | Type | Metric | Score |
 |--------|------|---------|-------|
@@ -169,7 +169,7 @@ https://drive.google.com/file/d/1jpgKn6MEAjYPJIUr3Q1ghGzgn75OkCs4/view?usp=shari
 
 ---
 
-## 🧾 Inputs
+## Inputs
 
 | Input | Description |
 |--------|-------------|
@@ -179,7 +179,7 @@ https://drive.google.com/file/d/1jpgKn6MEAjYPJIUr3Q1ghGzgn75OkCs4/view?usp=shari
 
 ---
 
-## 🎯 Expected Outputs
+## Expected Outputs
 
 | Output | Description |
 |---------|-------------|
@@ -190,27 +190,27 @@ https://drive.google.com/file/d/1jpgKn6MEAjYPJIUr3Q1ghGzgn75OkCs4/view?usp=shari
 
 ---
 
-## 🔗 Google Colab Link
+## Google Colab Link
 
 You can run this project online using Google Colab:  
-👉 [**Open in Google Colab**](https://colab.research.google.com/drive/1pbatbx4FQFrttHBYjm_3BspHFJzwMrZ5?usp=sharing)  
+[**Open in Google Colab**](https://colab.research.google.com/drive/1pbatbx4FQFrttHBYjm_3BspHFJzwMrZ5?usp=sharing)  
 
 ---
 
-## 🧪 Testing and Validation
+## Testing and Validation
 
-### ✅ 1. Test with Known Patterns
+### 1. Test with Known Patterns
 - Salary increases with **Experience**.  
 - Employees with **higher education** tend to earn more.  
 - **Attrition** may be higher among younger, less-experienced employees.
 
-### ✅ 2. Validate Model Accuracy
+### 2. Validate Model Accuracy
 - Use `cross_val_score()` for model stability.  
 - Tune hyperparameters (e.g., `max_depth`, `kernel`, `C`) for better results.  
 
 ---
 
-## 🧩 Troubleshooting Tips
+## Troubleshooting Tips
 
 | Issue | Likely Cause | Solution |
 |--------|---------------|-----------|
@@ -219,7 +219,7 @@ You can run this project online using Google Colab:
 | Low Accuracy | Overfitting or unscaled data | Adjust `max_depth` or apply scaling |
 | Empty predictions | Wrong target selection | Ensure correct target column is used |
 
-## 💡 Example 1: Employee Salary Prediction (Regression)
+## Example 1: Employee Salary Prediction (Regression)
 
 **Objective:**  
 Predict the **salary** of employees based on factors like age, experience, education level, and city using **Linear Regression**.
@@ -245,7 +245,7 @@ Predict the **salary** of employees based on factors like age, experience, educa
 
 ---
 
-## 💡 Example 2: Employee Attrition Prediction (Classification)
+## Example 2: Employee Attrition Prediction (Classification)
 
 **Objective:**  
 Predict whether an employee is likely to leave the company based on demographics and job profile using **Support Vector Machine (SVM)** and **Decision Tree** classifiers.
@@ -272,7 +272,7 @@ Predict whether an employee is likely to leave the company based on demographics
 
 ---
 
-## 💡 Example 3: Combined Model Comparison
+## Example 3: Combined Model Comparison
 
 **Objective:**  
 Compare regression and classification results to understand how different algorithms perform across tasks.
