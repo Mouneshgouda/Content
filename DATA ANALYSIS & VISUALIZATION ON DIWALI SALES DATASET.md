@@ -280,7 +280,7 @@ Study the effect of gender, study hours, and parental education on student exam 
 
 ---
 
-📘 **Note:**  
+**Note:**  
 You can replicate this workflow in Google Colab or Jupyter Notebook using libraries like **pandas**, **numpy**, **matplotlib**, and **seaborn** — just like in the Diwali Sales project.  
 Simply replace the dataset and modify the column names as per your data structure.
 
