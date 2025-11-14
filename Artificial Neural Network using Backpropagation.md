@@ -3,15 +3,15 @@
 ---
 
 ## Objective
-To build and train an **Artificial Neural Network (ANN)** using the **Backpropagation Algorithm** to predict **customer churn** (whether a customer will leave the bank or not).  
-We use the **Churn Modelling dataset** from Kaggle to train, test, and evaluate model performance.
+To build and train an Artificial Neural Network (ANN) using the Backpropagation Algorithm to predict customer churn (whether a customer will leave the bank or not).  
+We use the Churn Modelling dataset from Kaggle to train, test, and evaluate model performance.
 
 ---
 
 ## Learning Outcomes
-- Understand how a basic **ANN** works using **Backpropagation**.  
-- Perform **data preprocessing** for real-world datasets.  
-- Evaluate model performance using metrics such as **accuracy** and **loss**.  
+- Understand how a basic ANN works using Backpropagation  
+- Perform data preprocessing for real-world datasets.  
+- Evaluate model performance using metrics such as accuracy and loss.  
 - Visualize learning curves and make predictions using Keras.
 
 ---
@@ -25,8 +25,8 @@ We use the **Churn Modelling dataset** from Kaggle to train, test, and evaluate 
 ---
 
 ## About the Dataset
-**Dataset Name:** `Churn_Modelling.csv`  
-**Source:** Kaggle  
+Dataset Name: `Churn_Modelling.csv`  
+Source:Kaggle  
 
 ### Description  
 This dataset contains customer demographics and banking details to predict whether a customer will leave the bank (churn).  
@@ -55,11 +55,11 @@ This dataset contains customer demographics and banking details to predict wheth
 
 | Software | Description |
 |-----------|-------------|
-| **Python (≥3.8)** | Primary programming language used for model implementation |
-| **Google Colab / Jupyter Notebook** | Interactive IDE for coding, visualization, and training neural networks |
-| **Anaconda (optional)** | For environment management and package installation |
-| **GitHub / Google Drive** | Store and share datasets, scripts, and project notebooks |
-| **Kaggle** | Source for the `Churn_Modelling.csv` dataset |
+| Python (≥3.8) | Primary programming language used for model implementation |
+| Google Colab / Jupyter Notebook | Interactive IDE for coding, visualization, and training neural networks |
+| Anaconda (optional) | For environment management and package installation |
+| GitHub / Google Drive | Store and share datasets, scripts, and project notebooks |
+| Kaggle | Source for the `Churn_Modelling.csv` dataset |
 
 ---
 
@@ -195,12 +195,12 @@ Run this project online using Google Colab:
 ##  Testing and Validation
 
 ###  1. Test with Known Patterns
-- Customers with **low balance** or **low activity** are more likely to churn.  
-- **Higher credit score** or **longer tenure** → lower churn rate.  
+- Customers with low balance or low activity are more likely to churn.  
+- Higher credit score or longer tenure → lower churn rate.  
 
 ###  2. Validate Model Accuracy
 - Use `model.evaluate(X_test, y_test)` if dataset is split.  
-- Adjust **hidden layers**, **neurons**, and **epochs** to optimize performance.  
+- Adjust hidden layers, neurons, and epochs to optimize performance.  
 
 ---
 
@@ -212,52 +212,4 @@ Run this project online using Google Colab:
 | Low Accuracy | Underfitting or insufficient layers | Increase hidden units or epochs |
 | Overfitting | Too many epochs / no dropout | Add dropout or early stopping |
 | Slow Training | Large dataset or high epochs | Reduce epochs or use GPU in Colab |
-
-##  Example 1: Bank Customer Churn Prediction
-
-**Objective:**  
-Predict whether a customer will leave the bank (churn) based on attributes such as credit score, age, balance, and activity level.
-
-**Dataset:**  
-[`Churn_Modelling.csv`](https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling) — includes customer demographics and banking details.
-
-**Possible Tasks:**
-- Load and preprocess the dataset.  
-- Encode categorical variables (e.g., Geography, Gender).  
-- Normalize numerical features.  
-- Build an **Artificial Neural Network** using **Keras** with 2–3 hidden layers.  
-- Train using **backpropagation** and **binary cross-entropy loss**.  
-- Evaluate accuracy, loss, and confusion matrix.  
-
-**Expected Output:**
-- Accuracy around **80–85%**.  
-- Loss curve showing model convergence.  
-- Confusion matrix identifying true vs. predicted churners.  
-- Insight: Customers with lower credit scores or balances are more likely to churn.
-
----
-
-##  Example 2: Diabetes Prediction using ANN
-
-**Objective:**  
-Build an ANN to classify whether a patient has diabetes based on medical attributes.
-
-**Dataset:**  
-[`Pima Indians Diabetes Database`](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database).
-
-**Possible Tasks:**
-- Load and clean the dataset.  
-- Normalize glucose, BMI, and age values.  
-- Split data into training and test sets.  
-- Construct an ANN with ReLU activations and Sigmoid output.  
-- Train the model with **Adam optimizer** and **binary cross-entropy** loss.  
-- Evaluate performance on test data.  
-
-**Expected Output:**
-- Accuracy ~78–85%.  
-- Visualizations of loss and accuracy per epoch.  
-- Insight: Higher glucose levels and BMI correlate strongly with diabetes.  
-
----
-
 
