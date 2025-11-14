@@ -130,6 +130,12 @@ plt.show()
 | Accuracy Score | Performance on unseen data |
 | Confusion Matrix & Classification Report | Evaluation of predictions |
 
+## Google Colab Link
+
+You can run this project online using Google Colab:  
+ [**Open in Google Colab**](https://colab.research.google.com/drive/1lMCfn0Kq8DypMGhXrb2B58h3otnsh7Bm?usp=sharing)
+
+
 ## Testing and Validation
 
 - Test the model with known samples to ensure it predicts correctly.
